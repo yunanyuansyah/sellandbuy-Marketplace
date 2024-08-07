@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0");
+
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+
+@layer components {
+    .caption {
+      @apply w-[100px]  sm:w-[500px] h-[25px] sm:h-auto py-[5px] sm:py-[20px] px-[20px] absolute flex flex-col items-center left-0 right-0 bottom-[10%] mt-[100%] mx-auto rounded-md sm:rounded-3xl bg-black font-saira text-white  hover:bg-gray-400 hover:text-white;
+    }
+
+    .title-h1 {
+        @apply text-[10px] sm:text-[30px] font-bold ;
+    }
+
+    .med-p {
+        @apply hidden sm:flex w-fit text-[25px];
+    }
+
+
+
+    .banner {
+        @apply flex relative;
+    }
+
+    .card {
+        @apply shadow-lg block overflow-hidden rounded-lg ;
+    }
+
+    .card-img {
+        @apply aspect-[1/1] w-full object-cover transition duration-500 group-hover:scale-105 h-full ;
+    }
+
+    .card-caption{
+        @apply relative bg-white py-3 px-2;
+    }
+
+    .card-title {
+        @apply text-lg sm:text-xl font-semibold text-gray-900 group-hover:underline group-hover:underline-offset-4;
+    }
+
+    .pf-row{
+        @apply  flex flex-row justify-start items-center overflow-hidden rounded-md  px-3 py-2 shadow-sm;
+    }
+
+    .pf-row-box{
+        @apply w-full mx-4 placeholder:text-black placeholder:italic border border-black rounded-lg py-1 px-2  focus:outline-none focus:ring-0 sm:text-xl;
+    }
+
+    .cart-title {
+        @apply mt-0.5 space-y-px text-2xl text-black;
+    }
+
+    .cart-desc {
+        @apply mt-0.5 space-y-px text-2xl text-grey-500;
+    }
+  }

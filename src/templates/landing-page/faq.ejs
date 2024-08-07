@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell & Buy - FAQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/faq.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body class="min-h-screen flex flex-col font-saira">
+    <div id="nav-wrp">
+      <header
+        id="navbar"
+        class="bg-white flex items-center justify-center inset-x-0 top-0 z-50"
+      >
+        <div
+          id="top-nav"
+          class="w-full flex items-center justify-between sm:pt-4 sm:pb-0 px-2 sm:px-5 pt-5 pb-5"
+        >
+          <a
+            href="/"
+            id="back-button"
+            class="absolute top-0 left-0 m-4 w-25 h-25 bg-white rounded-full shadow-lg flex items-center justify-center"
+          >
+            <svg
+              class="w-6 h-6 text-black"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+          </a>
+          <div class="flex w-full justify-center">
+            <a href="/" id="navbar-logo" class="flex justify-center">
+              <img
+                id="logo"
+                class="h-5 sm:h-9 sm:w-auto cursor-pointer"
+                src="images/navbar-logo.png"
+              />
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div
+      id="content"
+      class="flex-grow w-full flex flex-col align-middle justify-center mt-[101.2px] sm:mt-[96px] mb-10 relative"
+    >
+      <section class="faq-section max-w-4xl mx-auto p-8">
+        <h1 class="text-3xl font-bold text-center mt-8">
+          Frequently Asked Questions
+        </h1>
+        <div class="faq">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer p-4 mt-4 border-b"
+            onclick="toggleFAQ(this)"
+          >
+            <h2 class="text-xl font-semibold">Apa itu website Sell&Buy?</h2>
+            <svg
+              class="w-6 h-6 text-gray-500 transition-transform transform rotate-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p class="p-4">
+              Website Sell&Buy merupakan salah satu inovasi website marketplace
+              konsinyasi yang menyediakan lapak bagi masyarakat yang ingin
+              menawarkan atau membeli barang dan jasa. Dengan adanya website
+              ini, diharapkan dapat membantu memperluas jangkauan pasar UMKM
+              baru.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer p-4 mt-4 border-b"
+            onclick="toggleFAQ(this)"
+          >
+            <h2 class="text-xl font-semibold">
+              Mengapa saya harus menggunakan website Sell&Buy?
+            </h2>
+            <svg
+              class="w-6 h-6 text-gray-500 transition-transform transform rotate-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p class="p-4">
+              Website ini tidak hanya sekedar lapak, namun ada beberapa fitur
+              menarik yang dapat kita lihat di website ini, untuk lebih
+              lengkapnya bisa dilihat di website kami.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer p-4 mt-4 border-b"
+            onclick="toggleFAQ(this)"
+          >
+            <h2 class="text-xl font-semibold">
+              Bagaimana cara kerja website Sell&Buy?
+            </h2>
+            <svg
+              class="w-6 h-6 text-gray-500 transition-transform transform rotate-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p class="p-4">
+              Website Sell&Buy memiliki sistem layaknya pasar pada umumnya.
+              Dimana penjual akan menawarkan barangnya dan pembeli akan
+              memberikan penawarannya.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer p-4 mt-4 border-b"
+            onclick="toggleFAQ(this)"
+          >
+            <h2 class="text-xl font-semibold">
+              Apa saja fitur yang ada di website Sell&Buy?
+            </h2>
+            <svg
+              class="w-6 h-6 text-gray-500 transition-transform transform rotate-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p class="p-4">
+              Website Sell&Buy memiliki beberapa fitur menarik seperti fitur
+              “Buat Penawaran”, fitur chat yang akan langsung diarahkan ke
+              whatsapp penjual, dan beberapa fitur lainnya. Namun tidak hanya
+              berhenti di fitur-fitur tersebut, kami terus berusaha
+              mengembangkan fitur-fitur yang ada.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer p-4 mt-4 border-b"
+            onclick="toggleFAQ(this)"
+          >
+            <h2 class="text-xl font-semibold">
+              Bagaimana cara saya menjadi membership Sell&Buy?
+            </h2>
+            <svg
+              class="w-6 h-6 text-gray-500 transition-transform transform rotate-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p class="p-4">
+              Membership Sell&Buy dapat didapatkan dengan click menu profile >
+              dapatkan membership.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div
+            class="faq-question flex justify-between items-center cursor-pointer p-4 mt-4 border-b"
+            onclick="toggleFAQ(this)"
+          >
+            <h2 class="text-xl font-semibold">
+              Bagaimana cara kerja fitur penawaran pada website Sell&Buy?
+            </h2>
+            <svg
+              class="w-6 h-6 text-gray-500 transition-transform transform rotate-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p class="p-4">
+              Website Sell&Buy memiliki fitur menarik yaitu fitur “Buat
+              Penawaran”, dimana pembeli saat masuk ke halaman “buat penawaran”
+              pembeli akan diminta untuk membuat penawaran harga pada kolom yang
+              disediakan beserta alasan mengapa memberikan harga tersebut.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="mt-auto">
+      <div id="ftr-wrp">
+        <div
+          id="ftr"
+          class="grid grid-cols-1 grid-rows-1 gap-y-[2px] flex-col items-center bg-white text-white font-saira"
+        >
+          <div
+            id="top-ftr"
+            class="flex flex-row items-center justify-between pt-[15px] pb-3 px-2 sm:px-16 bg-black text-[10px] sm:text-[20px]"
+          >
+            <div
+              id="cstmr-srvc"
+              class="w-fit flex flex-row items-center justify-start"
+            >
+              <a href="/faq" class="leading-6">FAQ</a>
+              <h1 id="divider" class="mx-3 text-sm">|</h1>
+              <a href="/privacy" class="leading-6">Privacy Policy</a>
+              <h1 id="divider" class="mx-3 text-sm">|</h1>
+              <a href="/tos" class="leading-6">Terms & Condition</a>
+            </div>
+            <div id="c-right" class="w-auto flex justify-end items-center">
+              <h1>CopyRight © 2024 Sell&Buy</h1>
+            </div>
+          </div>
+          <div
+            id="bot-ftr"
+            class="flex flex-col sm:flex-row bg-black px-2 sm:px-16 py-3.5 sm:py-7 justify-between"
+          >
+            <div
+              id="cmpny"
+              class="w-1/2 sm:w-2/3 flex flex-col sm:flex-row justify-between sm:justify-start"
+            >
+              <img
+                src="images/footer-logo.png"
+                class="w-[150px] sm:w-[300px] mr-[5px]"
+              />
+              <span
+                class="flex flex-col justify-between items-start text-[10px] sm:text-[15px]"
+              >
+                <h1 class="flex align-top justify-start text-left">
+                  Alamat: Jl. Komojoyo No.16, Caturtunggal, Daerah Istimewa
+                  Yogyakarta
+                </h1>
+                <h1 class="flex align-top justify-start text-left">
+                  Phone: 0822-4671-3849
+                </h1>
+                <h1 class="flex align-top justify-start text-left">
+                  Email: sellandbuy@gmail.com
+                </h1>
+              </span>
+            </div>
+            <div
+              id="social"
+              class="w-1/2 sm:w-1/3 flex flex-row justify-between items-center"
+            >
+              <a href="#" class="flex items-center"
+                ><img src="images/instagram.png"
+              /></a>
+              <a href="#" class="flex items-center"
+                ><img src="images/whatsapp.png"
+              /></a>
+              <a href="#" class="flex items-center"
+                ><img src="images/linkedin.png"
+              /></a>
+              <a href="#" class="flex items-center"
+                ><img src="images/email.png"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      function toggleFAQ(element) {
+        const answer = element.nextElementSibling;
+        const icon = element.querySelector("svg");
+
+        if (answer.style.maxHeight) {
+          answer.style.maxHeight = null;
+          icon.classList.remove("rotate-180");
+        } else {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          icon.classList.add("rotate-180");
+        }
+      }
+    </script>
+  </body>
+</html>

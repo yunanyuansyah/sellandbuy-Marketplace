@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Users</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <div class="container mx-auto">
+      <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div class="relative flex items-center justify-between h-16">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <button
+                id="mobile-menu-button"
+                type="button"
+                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-300"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Open main menu</span>
+                <svg
+                  class="block h-6 w-6"
+                  id="menu-open-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
+                </svg>
+                <svg
+                  class="hidden h-6 w-6"
+                  id="menu-close-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
+            >
+              <div class="flex-shrink-0">
+                <h1 class="text-2xl font-bold">Admin Dashboard</h1>
+              </div>
+              <div class="hidden sm:block sm:ml-6">
+                <div class="flex space-x-4">
+                  <a
+                    href="/admin-dashboard/products"
+                    class="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >Products</a
+                  >
+                  <a
+                    href="/admin-dashboard/memberships"
+                    class="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >Memberships</a
+                  >
+                  <a
+                    href="/admin-dashboard/users"
+                    class="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >Users</a
+                  >
+                  <a
+                    href="/admin-dashboard/categories"
+                    class="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >Categories</a
+                  >
+                  <a
+                    href="/logout"
+                    class="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >Logout</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sm:hidden" id="mobile-menu" style="display: none;">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a
+              href="/admin-dashboard/products"
+              class="text-gray-900 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >Products</a
+            >
+            <a
+              href="/admin-dashboard/memberships"
+              class="text-gray-900 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >Memberships</a
+            >
+            <a
+              href="/admin-dashboard/users"
+              class="text-gray-900 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >Users</a
+            >
+            <a
+              href="/admin-dashboard/categories"
+              class="text-gray-900 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >Categories</a
+            >
+            <a
+              href="/logout"
+              class="text-gray-900 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >Logout</a
+            >
+          </div>
+        </div>
+      </nav>     
+      <div class="py-4">
+        <h1 class="text-3xl font-bold text-center sm:text-left">Admin Dashboard - Users</h1>
+        <hr class="my-4" />
+        <% if (messages.error && messages.error.length > 0) { %>
+        <div class="bg-red-500 text-white p-4 mb-4 rounded">
+          <% messages.error.forEach(function (message) { %>
+          <p><%= message %></p>
+          <% }) %>
+        </div>
+        <% } %> <% if (messages.success && messages.success.length > 0) { %>
+        <div class="bg-green-500 text-white p-4 mb-4 rounded">
+          <% messages.success.forEach(function (message) { %>
+          <p><%= message %></p>
+          <% }) %>
+        </div>
+        <% } %>
+        <div class="overflow-x-auto mx-3">
+          <table class="min-w-full bg-white">
+            <thead>
+              <tr>
+                <th class="w-1/6 py-2">Username</th>
+                <th class="w-1/6 py-2">Email</th>
+                <th class="w-1/6 py-2">Phone</th>
+                <th class="w-1/6 py-2">Membership</th>
+                <th class="w-1/6 py-2">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% users.forEach(function (user) { %>
+              <tr>
+                <td class="border px-4 py-2"><%= user.username %></td>
+                <td class="border px-4 py-2"><%= user.email %></td>
+                <td class="border px-4 py-2"><%= user.phone %></td>
+                <td class="border px-4 py-2"><%= user.membership %></td>
+                <td class="border px-4 py-2">
+                  <form
+                    action="/admin-dashboard/users/delete/<%= user._id %>"
+                    method="POST"
+                    class="inline"
+                  >
+                    <button
+                      type="submit"
+                      class="bg-red-500 text-white px-4 py-2 rounded"
+                    >
+                      Delete
+                    </button>
+                  </form>
+                </td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        var menu = document.getElementById('mobile-menu');
+        var menuOpenIcon = document.getElementById('menu-open-icon');
+        var menuCloseIcon = document.getElementById('menu-close-icon');
+    
+        if (menu.style.display === 'none' || menu.style.display === '') {
+          menu.style.display = 'block';
+          menuOpenIcon.classList.add('hidden');
+          menuCloseIcon.classList.remove('hidden');
+        } else {
+          menu.style.display = 'none';
+          menuOpenIcon.classList.remove('hidden');
+          menuCloseIcon.classList.add('hidden');
+        }
+      });
+    </script>
+  </body>
+</html>

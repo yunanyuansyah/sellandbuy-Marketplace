@@ -1,0 +1,29 @@
+.header {
+    @media (min-width: 1280px) {
+        text-align: left;
+    }
+}
+
+.form-container {
+    @media (min-width: 1280px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.nama-depan {
+    @media (min-width: 1024px) {
+        width: 16rem /* 256px */;
+    }
+}
+
+.nama-belakang {
+    @media (min-width: 1024px) {
+        width: 16rem /* 256px */;
+    }
+}
+
+.illustration {
+    @media (max-width: 1280px) {
+        display: none;
+    }
+}

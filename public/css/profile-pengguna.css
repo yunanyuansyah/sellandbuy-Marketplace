@@ -1,0 +1,35 @@
+body {
+  font-family: "Saira Semi Condensed", sans-serif;
+}
+
+#content {
+  margin-top: 120px;
+}
+
+.profile-section {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.product-card img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+}
+
+#top-ftr,
+#bot-ftr {
+  background-color: #000;
+}
+
+.edit-mode {
+  background-color: #f0f0f0;
+  border: 1px solid #000;
+}

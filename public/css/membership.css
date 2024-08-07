@@ -1,0 +1,35 @@
+.header {
+    @media (min-width: 1024px) {
+        text-align: left;
+    }
+}
+
+.membership-cards{
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.illust-sentences {
+    @media (min-width: 1024px) {
+        font-size: 1.25rem /* 20px */;
+        line-height: 1.75rem /* 28px */;
+    }
+}
+
+.benefit-header {
+    @media (min-width: 1024px) {
+        font-size: 3rem /* 48px */;
+        line-height: 1;
+        text-align: left;
+    }
+}
+
+.benefit-detail {
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-left: 13rem /* 208px */;
+        margin-right: 13rem /* 208px */;
+
+    }
+}

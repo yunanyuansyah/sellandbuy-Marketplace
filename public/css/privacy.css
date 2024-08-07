@@ -1,0 +1,50 @@
+#back-button {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+#back-button:hover {
+  background-color: #f0f0f0;
+}
+
+#back-button svg {
+  width: 24px;
+  height: 24px;
+  stroke: black;
+}
+
+.privacy-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-content p {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.privacy-content h2,
+.privacy-content h3 {
+  margin-top: 2rem;
+}
+
+.privacy-content ul {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.footer {
+  margin-top: auto;
+}

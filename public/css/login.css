@@ -1,0 +1,77 @@
+.login-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.login-section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.login-section p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.login-section button {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.login-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-section form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.login-section form input:focus {
+  outline: none;
+  border-color: #4a5568;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.6);
+}
+
+.login-section form a {
+  display: block;
+  text-align: right;
+  font-size: 0.875rem;
+  color: #718096;
+  text-decoration: none;
+}
+
+.login-section form a:hover {
+  text-decoration: underline;
+}
+
+.login-section form button {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-section form button:hover {
+  background-color: #2d3748;
+}
+
+.login-section form p {
+  font-size: 1rem;
+  text-align: center;
+}

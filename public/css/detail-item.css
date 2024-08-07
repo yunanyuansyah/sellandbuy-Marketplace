@@ -1,0 +1,11 @@
+.line {
+    @media (min-width: 1280px) {
+        width: 66.666667%;
+    }
+}
+
+.button {
+    @media (min-width: 1280px) {
+        width: 66.666667%;
+    }
+}

@@ -3,6 +3,7 @@ const express = require("express");
 const session = require("express-session");
 const path = require("path");
 const mongoose = require("mongoose");
+const MongoStore = require("connect-mongo");
 const bodyParser = require("body-parser");
 const layouts = require("express-ejs-layouts");
 const mongoSanitize = require("express-mongo-sanitize");
@@ -38,6 +39,10 @@ app.use(
     resave: false,
     saveUninitialized: true,
     cookie: { maxAge: oneWeek },
+    store: MongoStore.create({
+      mongoUrl: process.env.MONGO_URI,
+      ttl: 14 * 24 * 60 * 60 // = 14 days. Default
+    })
   })
 );
 app.use(flash());

@@ -11,9 +11,5 @@
             "src": "/(.*)",
             "dest": "src/application/index.js"
         }
-    ],
-    "env": {
-        "SESSION_SECRET": "@session_secret",
-        "MONGO_URI": "@mongo_uri"
-    }
+    ]
 }

@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const path = require("path");
+const moment = require('moment');
 const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
@@ -192,6 +193,15 @@ app.post("/register", async (req, res) => {
     return res.redirect("/register");
   }
 
+  // Convert birthdate to a valid format
+  const formattedBirthdate = moment(birthdate, 'DD/MM/YYYY').format('YYYY-MM-DD');
+
+  // Check if the date is valid
+  if (!moment(formattedBirthdate, 'YYYY-MM-DD', true).isValid()) {
+    req.flash("error", "Invalid date format");
+    return res.redirect("/register");
+  }
+
   const hashedPassword = await bcrypt.hash(password, 10);
 
   const user = new User({
@@ -200,7 +210,7 @@ app.post("/register", async (req, res) => {
     password: hashedPassword,
     phone,
     address,
-    birthdate,
+    birthdate: formattedBirthdate,
     membership: "none",
   });
   await user.save();

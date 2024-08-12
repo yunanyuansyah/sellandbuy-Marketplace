@@ -61,6 +61,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-mongo": "^5.1.0",
-    "express-flash": "^0.0.2"
+    "express-flash": "^0.0.2",
+    "moment": "^2.30.1"
   }
 }
